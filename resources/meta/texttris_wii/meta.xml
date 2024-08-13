@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>texttris</name>
+  <coder>toddy</coder>
+  <version>1.2</version>
+  <release_date>20121202000000</release_date>
+  <short_description>1-2 player tetris-like game</short_description>
+  <long_description>
+Hold the wiimotes sideways or use a classic controller 
+
+Wiimote keys are:
+1 - rotate anticlockwise / back in menu screens
+2 - rotate clockwise / select in menu screens
+down - soft drop
+A, up* - hard drop
++ - toggle ghost 
+home - pause
+
+Classic controller keys are:
+B - rotate anticlockwise / back in menu screens
+A - rotate clockwise / select in menu screens
+down - soft drop
+L, R, ZL, ZR, up* - hard drop
+X - toggle ghost 
+home, -, + - pause
+
+Copyright 2009 - 2012, released under Gnu Public Licence v3.
+
+Credits:
+Code: Toddy
+Soundtrack: Pete
+Built using devkitPro
+  </long_description>
+</app>

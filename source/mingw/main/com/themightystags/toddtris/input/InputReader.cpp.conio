@@ -1,0 +1,99 @@
+//    Copyright 2009 Toddy
+//
+//    This file is part of Toddtris.
+//
+//    Toddtris is free software: you can redistribute it and/or modify
+//    it under the terms of the GNU General Public License as published by
+//    the Free Software Foundation, either version 3 of the License, or
+//    (at your option) any later version.
+//
+//    Toddtris is distributed in the hope that it will be useful,
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//    GNU General Public License for more details.
+//
+//    You should have received a copy of the GNU General Public License
+//    along with Toddtris.  If not, see <http://www.gnu.org/licenses/>.
+
+#include "com/themightystags/toddtris/input/InputReader.h"
+#include <conio.h>
+
+using namespace std;
+using com::themightystags::toddtris::input::InputReader;
+
+bool InputReader::initialised = false;
+
+InputState InputReader::getInputState() {
+
+	InputState inputState = {{0}};
+
+	if (kbhit()) {
+		char c = getch();
+		switch (c) {
+
+		case 'a' :
+			inputState.leftPressed[0] = true;
+			break;
+		case 'd' :
+			inputState.rightPressed[0] = true;
+			break;
+		case 't' :
+			inputState.rotatePressed[0] = true;
+			break;
+		case 'f' :
+			inputState.antirotatePressed[0] = true;
+			break;
+		case 'w' :
+			inputState.upPressed[0] = true;
+			break;
+		case 's' :
+			inputState.downPressed[0] = true;
+			break;
+
+		case '1' :
+			inputState.pausePressed[0] = true;
+			break;
+		case '2' :
+			inputState.restartPressed[0] = true;
+			break;
+		case '3' :
+			inputState.exitPressed[0] = true;
+			break;
+
+		case 'h' :
+			inputState.leftPressed[1] = true;
+			break;
+		case 'k' :
+			inputState.rightPressed[1] = true;
+			break;
+		case 'p' :
+			inputState.rotatePressed[1] = true;
+			break;
+		case 'l' :
+			inputState.antirotatePressed[1] = true;
+			break;
+		case 'u' :
+			inputState.upPressed[1] = true;
+			break;
+		case 'j' :
+			inputState.downPressed[1] = true;
+			break;
+
+		case '6' :
+			inputState.pausePressed[1] = true;
+			break;
+		case '7' :
+			inputState.restartPressed[1] = true;
+			break;
+		case '8' :
+			inputState.exitPressed[1] = true;
+			break;
+}
+	}
+	return inputState;
+}
+
+void InputReader::init() {
+        // nothing to do
+}
+
